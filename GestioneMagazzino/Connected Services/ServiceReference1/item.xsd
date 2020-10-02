@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="UtenteClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cognome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idutente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAdmin" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UtenteClass" nillable="true" type="tns:UtenteClass" />
+  <xs:complexType name="ArrayOfUtenteClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UtenteClass" nillable="true" type="tns:UtenteClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUtenteClass" nillable="true" type="tns:ArrayOfUtenteClass" />
+  <xs:complexType name="ArrayOfFornitoreClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FornitoreClass" nillable="true" type="tns:FornitoreClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFornitoreClass" nillable="true" type="tns:ArrayOfFornitoreClass" />
+  <xs:complexType name="FornitoreClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idfornitore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Indirizzo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Partitaiva" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FornitoreClass" nillable="true" type="tns:FornitoreClass" />
+  <xs:complexType name="ArrayOfClienteClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClienteClass" nillable="true" type="tns:ClienteClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClienteClass" nillable="true" type="tns:ArrayOfClienteClass" />
+  <xs:complexType name="ClienteClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codicefiscale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idcliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Indirizzo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Partitaiva" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteClass" nillable="true" type="tns:ClienteClass" />
+  <xs:complexType name="ArrayOfProdottoClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProdottoClass" nillable="true" type="tns:ProdottoClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProdottoClass" nillable="true" type="tns:ArrayOfProdottoClass" />
+  <xs:complexType name="ProdottoClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idprodotto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Inesaurimento" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prezzo" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProdottoClass" nillable="true" type="tns:ProdottoClass" />
+  <xs:complexType name="ArrayOfFatturaAcquistoClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FatturaAcquistoClass" nillable="true" type="tns:FatturaAcquistoClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFatturaAcquistoClass" nillable="true" type="tns:ArrayOfFatturaAcquistoClass" />
+  <xs:complexType name="FatturaAcquistoClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodFornitore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodProdotto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodUtente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataAcquisto" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Nfattura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrezzoAcquisto" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FatturaAcquistoClass" nillable="true" type="tns:FatturaAcquistoClass" />
+  <xs:complexType name="ArrayOfFatturaVenditaClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FatturaVenditaClass" nillable="true" type="tns:FatturaVenditaClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFatturaVenditaClass" nillable="true" type="tns:ArrayOfFatturaVenditaClass" />
+  <xs:complexType name="FatturaVenditaClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodProdotto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodUtente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataVendita" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Nfattura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pagamento" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrezzoVendita" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FatturaVenditaClass" nillable="true" type="tns:FatturaVenditaClass" />
+</xs:schema>

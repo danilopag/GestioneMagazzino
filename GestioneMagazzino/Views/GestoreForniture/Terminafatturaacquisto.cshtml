@@ -1,0 +1,22 @@
+﻿@model GestioneMagazzino.Models.ModelFattureAcquisto
+@{
+    ViewBag.Title = "Terminafatturaacquisto";
+}
+
+<h2>Fattura Terminata e Registra correttamente</h2>
+
+@if (Session["Nfattura"] != null)
+{
+    Session["Nfattura"] = null;
+}
+
+@if (Session["CodFornitore"] != null)
+{
+    Session["CodFornitore"] = null;
+}
+<div>
+    @Html.ActionLink("Torna al menù principale", "IndexAddettoForniture")
+    &nbsp &nbsp
+    @Html.ActionLink("Crea nuova fattura", "Inizializzafatturaacquisto", "GestoreForniture")
+</div>
+

@@ -1,0 +1,42 @@
+﻿@model GestioneMagazzino.Models.ModelFattureVendita
+@{
+    ViewBag.Title = "Inizializza Fattura";
+}
+
+<h2>Inizializza Fattura</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h3>Inserisci Codice Cliente</h3>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CodCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CodCliente, new { htmlAttributes = new { @class = "form-control", placeholder = "Codice Cliente" } })
+            @Html.ValidationMessageFor(model => model.CodCliente, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Pagamento, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.CheckBoxFor(model => model.Pagamento, new { @class = "checkbox" })
+            @Html.ValidationMessageFor(model => model.Pagamento, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Inizializza Fattura" class="btn btn-default" />
+        </div>
+
+    </div>
+    @Html.ActionLink("Torna al menù principale", "IndexAddettoVendite")
+</div>
+}
+

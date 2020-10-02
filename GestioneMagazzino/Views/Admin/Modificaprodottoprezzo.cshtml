@@ -1,0 +1,45 @@
+﻿@model GestioneMagazzino.Models.ModelProdottiList
+
+@{
+    ViewBag.Title = "Modificaprodottoprezzo";
+}
+
+<h2>Modifica prezzo prodotto</h2>
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Idprodotto, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Idprodotto, new { htmlAttributes = new { @class = "form-control", placeholder = "Id prodotto da cambiare" } })
+            @Html.ValidationMessageFor(model => model.Idprodotto, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Prezzo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Prezzo, new { htmlAttributes = new { @class = "form-control", placeholder = "Nuovo prezzo" } })
+            @Html.ValidationMessageFor(model => model.Prezzo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Modifica prodotto" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Torna al menù principale", "AdminIndex")
+</div>

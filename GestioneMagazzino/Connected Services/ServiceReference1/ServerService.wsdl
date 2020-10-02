@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8799/Design_Time_Addresses/WCFServer/ServerService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8799/Design_Time_Addresses/WCFServer/ServerService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8799/Design_Time_Addresses/WCFServer/ServerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServerService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_RegisterUtente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUtente" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_RegisterUtente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUtenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_LoginUtente_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUtente" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_LoginUtente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUtenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_GetUtente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUtente" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_GetUtente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUtenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_SetUtenteisAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUtenteisAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_SetUtenteisAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUtenteisAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_UtentiList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UtentiList" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_UtentiList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UtentiListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_FornitoriList_InputMessage">
+    <wsdl:part name="parameters" element="tns:FornitoriList" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_FornitoriList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FornitoriListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertFornitore_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFornitore" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertFornitore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFornitoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_ClientiList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClientiList" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_ClientiList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClientiListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_ProdottiList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProdottiList" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_ProdottiList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProdottiListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertProdotto_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProdotto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertProdotto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProdottoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_Addquantitaprodotto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Addquantitaprodotto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_Addquantitaprodotto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddquantitaprodottoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_Minusquantitaprodotto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Minusquantitaprodotto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_Minusquantitaprodotto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MinusquantitaprodottoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_Disprodotto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disprodotto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_Disprodotto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisprodottoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_AlterNomeProdotto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterNomeProdotto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_AlterNomeProdotto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterNomeProdottoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_AlterPrezzoProdotto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterPrezzoProdotto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_AlterPrezzoProdotto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterPrezzoProdottoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_FattureAcquistoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:FattureAcquistoList" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_FattureAcquistoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FattureAcquistoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_FattureVenditaList_InputMessage">
+    <wsdl:part name="parameters" element="tns:FattureVenditaList" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_FattureVenditaList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FattureVenditaListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_AlterPagatoFattura_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterPagatoFattura" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_AlterPagatoFattura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterPagatoFatturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertFatturaVendita_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFatturaVendita" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertFatturaVendita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFatturaVenditaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertFatturaAcquisto_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFatturaAcquisto" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_InsertFatturaAcquisto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFatturaAcquistoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_NFatturaVendita_InputMessage">
+    <wsdl:part name="parameters" element="tns:NFatturaVendita" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_NFatturaVendita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NFatturaVenditaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServerService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/DoWork" message="tns:IServerService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/DoWorkResponse" message="tns:IServerService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUtente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/RegisterUtente" message="tns:IServerService_RegisterUtente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/RegisterUtenteResponse" message="tns:IServerService_RegisterUtente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUtente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/LoginUtente" message="tns:IServerService_LoginUtente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/LoginUtenteResponse" message="tns:IServerService_LoginUtente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUtente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/GetUtente" message="tns:IServerService_GetUtente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/GetUtenteResponse" message="tns:IServerService_GetUtente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUtenteisAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/SetUtenteisAdmin" message="tns:IServerService_SetUtenteisAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/SetUtenteisAdminResponse" message="tns:IServerService_SetUtenteisAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UtentiList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/UtentiList" message="tns:IServerService_UtentiList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/UtentiListResponse" message="tns:IServerService_UtentiList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FornitoriList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/FornitoriList" message="tns:IServerService_FornitoriList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/FornitoriListResponse" message="tns:IServerService_FornitoriList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFornitore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/InsertFornitore" message="tns:IServerService_InsertFornitore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/InsertFornitoreResponse" message="tns:IServerService_InsertFornitore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClientiList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/ClientiList" message="tns:IServerService_ClientiList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/ClientiListResponse" message="tns:IServerService_ClientiList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/InsertCliente" message="tns:IServerService_InsertCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/InsertClienteResponse" message="tns:IServerService_InsertCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProdottiList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/ProdottiList" message="tns:IServerService_ProdottiList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/ProdottiListResponse" message="tns:IServerService_ProdottiList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProdotto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/InsertProdotto" message="tns:IServerService_InsertProdotto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/InsertProdottoResponse" message="tns:IServerService_InsertProdotto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Addquantitaprodotto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/Addquantitaprodotto" message="tns:IServerService_Addquantitaprodotto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/AddquantitaprodottoResponse" message="tns:IServerService_Addquantitaprodotto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Minusquantitaprodotto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/Minusquantitaprodotto" message="tns:IServerService_Minusquantitaprodotto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/MinusquantitaprodottoResponse" message="tns:IServerService_Minusquantitaprodotto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disprodotto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/Disprodotto" message="tns:IServerService_Disprodotto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/DisprodottoResponse" message="tns:IServerService_Disprodotto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterNomeProdotto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/AlterNomeProdotto" message="tns:IServerService_AlterNomeProdotto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/AlterNomeProdottoResponse" message="tns:IServerService_AlterNomeProdotto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterPrezzoProdotto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/AlterPrezzoProdotto" message="tns:IServerService_AlterPrezzoProdotto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/AlterPrezzoProdottoResponse" message="tns:IServerService_AlterPrezzoProdotto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FattureAcquistoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/FattureAcquistoList" message="tns:IServerService_FattureAcquistoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/FattureAcquistoListResponse" message="tns:IServerService_FattureAcquistoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FattureVenditaList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/FattureVenditaList" message="tns:IServerService_FattureVenditaList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/FattureVenditaListResponse" message="tns:IServerService_FattureVenditaList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterPagatoFattura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/AlterPagatoFattura" message="tns:IServerService_AlterPagatoFattura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/AlterPagatoFatturaResponse" message="tns:IServerService_AlterPagatoFattura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFatturaVendita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/InsertFatturaVendita" message="tns:IServerService_InsertFatturaVendita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/InsertFatturaVenditaResponse" message="tns:IServerService_InsertFatturaVendita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFatturaAcquisto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/InsertFatturaAcquisto" message="tns:IServerService_InsertFatturaAcquisto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/InsertFatturaAcquistoResponse" message="tns:IServerService_InsertFatturaAcquisto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NFatturaVendita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/NFatturaVendita" message="tns:IServerService_NFatturaVendita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/NFatturaVenditaResponse" message="tns:IServerService_NFatturaVendita_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServerService" type="tns:IServerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IServerService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUtente">
+      <soap:operation soapAction="http://tempuri.org/IServerService/RegisterUtente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUtente">
+      <soap:operation soapAction="http://tempuri.org/IServerService/LoginUtente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUtente">
+      <soap:operation soapAction="http://tempuri.org/IServerService/GetUtente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUtenteisAdmin">
+      <soap:operation soapAction="http://tempuri.org/IServerService/SetUtenteisAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UtentiList">
+      <soap:operation soapAction="http://tempuri.org/IServerService/UtentiList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FornitoriList">
+      <soap:operation soapAction="http://tempuri.org/IServerService/FornitoriList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFornitore">
+      <soap:operation soapAction="http://tempuri.org/IServerService/InsertFornitore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientiList">
+      <soap:operation soapAction="http://tempuri.org/IServerService/ClientiList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCliente">
+      <soap:operation soapAction="http://tempuri.org/IServerService/InsertCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProdottiList">
+      <soap:operation soapAction="http://tempuri.org/IServerService/ProdottiList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProdotto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/InsertProdotto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addquantitaprodotto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/Addquantitaprodotto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Minusquantitaprodotto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/Minusquantitaprodotto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disprodotto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/Disprodotto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterNomeProdotto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/AlterNomeProdotto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterPrezzoProdotto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/AlterPrezzoProdotto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FattureAcquistoList">
+      <soap:operation soapAction="http://tempuri.org/IServerService/FattureAcquistoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FattureVenditaList">
+      <soap:operation soapAction="http://tempuri.org/IServerService/FattureVenditaList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterPagatoFattura">
+      <soap:operation soapAction="http://tempuri.org/IServerService/AlterPagatoFattura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFatturaVendita">
+      <soap:operation soapAction="http://tempuri.org/IServerService/InsertFatturaVendita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFatturaAcquisto">
+      <soap:operation soapAction="http://tempuri.org/IServerService/InsertFatturaAcquisto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NFatturaVendita">
+      <soap:operation soapAction="http://tempuri.org/IServerService/NFatturaVendita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServerService">
+    <wsdl:port name="BasicHttpBinding_IServerService" binding="tns:BasicHttpBinding_IServerService">
+      <soap:address location="http://localhost:8799/Design_Time_Addresses/WCFServer/ServerService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

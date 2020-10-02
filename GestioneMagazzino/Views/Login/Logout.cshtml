@@ -1,0 +1,22 @@
+﻿@model GestioneMagazzino.Models.ModelLogin
+@{
+    ViewBag.Title = "Logout";
+}
+
+<h2>Logout</h2>
+
+<h4>Logout effettuato</h4>
+
+@if (Session["Idutente"] != null)
+{
+    Session["Idutente"] = null;
+}
+
+@if (Session["isAdmin"] != null)
+{
+    Session["isAdmin"] = null;
+}
+<div>
+    @Html.ActionLink("Continua", "Login", "Login")
+</div>
+

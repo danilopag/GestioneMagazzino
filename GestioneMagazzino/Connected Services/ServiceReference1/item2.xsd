@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8799/Design_Time_Addresses/WCFServer/ServerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServer" />
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoWorkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterUtente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cognome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsAdmin" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterUtenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterUtenteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginUtente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDutente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginUtenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginUtenteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUtente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDutente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUtenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="GetUtenteResult" nillable="true" type="q1:UtenteClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUtenteisAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDutente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUtenteisAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetUtenteisAdminResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UtentiList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UtentiListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="UtentiListResult" nillable="true" type="q2:ArrayOfUtenteClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FornitoriList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FornitoriListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="FornitoriListResult" nillable="true" type="q3:ArrayOfFornitoreClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFornitore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PartitaIVA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Indirizzo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFornitoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertFornitoreResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientiList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientiListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="ClientiListResult" nillable="true" type="q4:ArrayOfClienteClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PartitaIVA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Codicefiscale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Indirizzo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertClienteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProdottiList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProdottiListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="ProdottiListResult" nillable="true" type="q5:ArrayOfProdottoClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProdotto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDprodotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Prezzo" type="xs:double" />
+        <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProdottoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertProdottoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Addquantitaprodotto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDprodotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddquantitaprodottoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddquantitaprodottoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Minusquantitaprodotto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDprodotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinusquantitaprodottoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MinusquantitaprodottoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Disprodotto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idprodotto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisprodottoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="DisprodottoResult" nillable="true" type="q6:ProdottoClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterNomeProdotto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDprodotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterNomeProdottoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlterNomeProdottoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterPrezzoProdotto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDprodotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Prezzo" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterPrezzoProdottoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlterPrezzoProdottoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FattureAcquistoList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FattureAcquistoListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="FattureAcquistoListResult" nillable="true" type="q7:ArrayOfFatturaAcquistoClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FattureVenditaList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FattureVenditaListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFServer" minOccurs="0" name="FattureVenditaListResult" nillable="true" type="q8:ArrayOfFatturaVenditaClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterPagatoFattura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nfattura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterPagatoFatturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlterPagatoFatturaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFatturaVendita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nfattura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodUtente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodProdotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+        <xs:element minOccurs="0" name="Pagamento" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFatturaVenditaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertFatturaVenditaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFatturaAcquisto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nfattura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodUtente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodFornitore" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodProdotto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantita" type="xs:int" />
+        <xs:element minOccurs="0" name="PrezzoAcquisto" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFatturaAcquistoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertFatturaAcquistoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NFatturaVendita">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NFatturaVenditaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NFatturaVenditaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,21 @@
+﻿@model GestioneMagazzino.Models.ModelFattureVendita
+@{
+    ViewBag.Title = "Terminafatturavendita";
+}
+
+<h2>Fattura Terminata e Registra correttamente</h2>
+
+@if (Session["Pagamento"] != null)
+{
+    Session["Pagamento"] = null;
+}
+
+@if (Session["CodCliente"] != null)
+{
+    Session["CodCliente"] = null;
+}
+<div>
+    @Html.ActionLink("Torna al menù principale", "IndexAddettoVendite")
+    &nbsp &nbsp
+    @Html.ActionLink("Crea nuova fattura", "Inizializzafatturavendita", "GestoreVendite")
+</div>

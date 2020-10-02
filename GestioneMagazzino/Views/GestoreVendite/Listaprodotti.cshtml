@@ -1,0 +1,73 @@
+﻿@model IEnumerable<GestioneMagazzino.Models.ModelProdottiList>
+
+@{
+    ViewBag.Title = "Listaprodotti";
+}
+
+
+
+<h2>Lista Prodotti</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Idprodotto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezzo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantita)
+        </th>
+        <th>
+            @Html.DisplayName("Stato")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idprodotto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantita)
+            </td>
+            <td>
+                 @if (item.Inesaurimento == true)
+                 {
+                    if (item.Quantita == 0)
+                    {
+                        @Html.DisplayName("Esaurito")
+                    }
+                    else
+                    {
+                    @Html.DisplayName("In Esaurimento")
+                    }
+                 }
+                 else
+                 {
+                    @Html.DisplayName("Disponibile")
+                 }
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Torna al menù principale", "IndexAddettoVendite")

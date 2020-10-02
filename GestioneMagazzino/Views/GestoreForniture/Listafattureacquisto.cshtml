@@ -1,0 +1,89 @@
+﻿@model IEnumerable<GestioneMagazzino.Models.ModelFattureAcquisto>
+
+    @{
+    ViewBag.Title = "Lista fatture Acquisto";
+    }
+ 
+
+    <h2>Lista Fatture Acquisto</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nfattura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataAcquisto)
+            </th>
+            <th>
+                @Html.DisplayName("Totale(Euro)")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodFornitore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodUtente)
+            </th>
+
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.Quantita != -1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nfattura)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataAcquisto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrezzoAcquisto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantita)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodFornitore)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodUtente)
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayName("")
+                    </td>
+                    <td>
+                        @Html.DisplayName("SALDO:")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrezzoAcquisto)
+                    </td>
+                    <td>
+                        @Html.DisplayName("")
+                    </td>
+                    <td>
+                        @Html.DisplayName("")
+                    </td>
+                    <td>
+                        @Html.DisplayName("")
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+    <div>
+        @Html.ActionLink("Torna al menù principale", "IndexAddettoForniture")
+    </div>

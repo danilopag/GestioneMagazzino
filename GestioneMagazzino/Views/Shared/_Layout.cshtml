@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Applicazione ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @if (Session["isAdmin"] != null)
+                {
+                    <ul class="nav navbar-nav">
+                        @if (Convert.ToInt32(Session["isAdmin"]) == 0)
+                        {
+                            <li>@Html.ActionLink("Gestione Magazzino", "Adminindex", "Admin")</li>
+                        }
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (Convert.ToInt32(Session["isAdmin"]) == 1) //Addetto Vendite
+                        {
+                            <li>@Html.ActionLink("Gestione Magazzino", "IndexAddettoVendite", "GestoreVendite")</li>
+                        }
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (Convert.ToInt32(Session["isAdmin"]) == 2) //Addetto Forniture
+                        {
+                            <li>@Html.ActionLink("Gestione Magazzino", "IndexAddettoForniture", "GestoreForniture")</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                            <li>@Html.ActionLink("Gestione Magazzino", "Login", "Login")</li>
+                    </ul>
+                }
+            </div>
+            <div class="navbar-collapse collapse">
+            @if (Session["isAdmin"] != null)
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Convert.ToInt32(Session["isAdmin"]) == 0)
+                    {
+                        <li>@Html.ActionLink("Clienti", "Listaclienti", "Admin")</li>
+                        <li>@Html.ActionLink("Fornitori", "Listafornitori", "Admin")</li>
+                        <li>@Html.ActionLink("Utenti", "Listautenti", "Admin")</li>
+                        <li>@Html.ActionLink("Prodotti", "Listaprodotti", "Admin")</li>
+                        <li>@Html.ActionLink("Fatture Acquisti", "Listafattureacquisto", "Admin")</li>
+                        <li>@Html.ActionLink("Fatture Vendite", "Listafatturevendita", "Admin")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
+                    }
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Convert.ToInt32(Session["isAdmin"]) == 1)
+                    {
+                        <li>@Html.ActionLink("Clienti", "Listaclienti", "GestoreVendite")</li>
+                        <li>@Html.ActionLink("Prodotti", "Listaprodotti", "GestoreVendite")</li>
+                        <li>@Html.ActionLink("Lista Fatture", "Listafatturevendita", "GestoreVendite")</li>
+                        <li>@Html.ActionLink("Aggiungi Cliente", "Aggiungicliente", "GestoreVendite")</li>
+                        <li>@Html.ActionLink("Nuova fattura vendita", "Inizializzafatturavendita", "GestoreVendite")</li>
+                        <li>@Html.ActionLink("Pagamento fattura", "Alterpagatofattura", "GestoreVendite")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
+                    }
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Convert.ToInt32(Session["isAdmin"]) == 2)
+                    {
+                        <li>@Html.ActionLink("Fornitori", "Listafornitori", "GestoreForniture")</li>
+                        <li>@Html.ActionLink("Prodotti", "Listaprodotti", "GestoreForniture")</li>
+                        <li>@Html.ActionLink("Lista Fatture", "Listafattureacquisto", "GestoreForniture")</li>
+                        <li>@Html.ActionLink("Aggiungi Fornitore", "Aggiungifornitore", "GestoreForniture")</li>
+                        <li>@Html.ActionLink("Nuova fattura", "Inizializzafatturaacquisto", "GestoreForniture")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
+                    }
+                </ul>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Danilo Paglialunga - 295827</p>
+            <p>Gabrile Ladisa - 288265</p>
+            <p>&copy; @DateTime.Now.Year - Applicazione ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

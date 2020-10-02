@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="84e85ec2f4ec4a92b6bc5f53434b0ae6" Name="Diagram1">
+        <EntityTypeShape EntityType="MagazzinoModel.CLIENTE" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazzinoModel.FATTURAACQUISTO" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazzinoModel.FATTURAVENDITA" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazzinoModel.FORNITORE" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazzinoModel.PRODOTTO" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazzinoModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazzinoModel.UTENTE" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="MagazzinoModel.FK_FATTURAVENDITA_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazzinoModel.FK_FATTURAACQUISTO_FORNITORE" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazzinoModel.FK_FATTURAACQUISTO_PRODOTTO" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazzinoModel.FK_FATTURAACQUISTO_UTENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazzinoModel.FK_FATTURAVENDITA_PRODOTTO" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazzinoModel.FK_FATTURAVENDITA_UTENTE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

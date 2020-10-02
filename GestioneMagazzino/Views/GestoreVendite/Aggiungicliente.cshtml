@@ -1,0 +1,78 @@
+﻿@model GestioneMagazzino.Models.ModelClientiList
+
+@{
+    ViewBag.Title = "Aggiungi cliente";
+}
+
+<h2>Aggiungi Cliente</h2>
+
+@if (Convert.ToBoolean(Session["Aggiungicliente"]) == true)
+{
+    <p> Cliente inserito correttamente nel Db</p>
+    Session["Aggiungicliente"] = false;
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", placeholder = "Nome fornitore" } })
+            @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Partitaiva, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Partitaiva, new { htmlAttributes = new { @class = "form-control", placeholder = "Partita IVA" } })
+            @Html.ValidationMessageFor(model => model.Partitaiva, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Codicefiscale, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Codicefiscale, new { htmlAttributes = new { @class = "form-control", placeholder = "Codice Fiscale" } })
+            @Html.ValidationMessageFor(model => model.Codicefiscale, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Indirizzo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Indirizzo, new { htmlAttributes = new { @class = "form-control", placeholder = "Indirizzo" } })
+            @Html.ValidationMessageFor(model => model.Indirizzo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Aggiungi cliente" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+    <div>
+        @Html.ActionLink("Torna al menù principale", "IndexAddettoVendite")
+    </div>
+}
+

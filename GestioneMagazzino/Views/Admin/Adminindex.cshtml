@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Adminindex";
+}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h3 class="display-8">IdUtente: @Session["Idutente"]</h3>
+            <p class="lead">Tipologia utente: Amministratore</p>
+        </div>
+    </div>
+    <main class="page service-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">AGGIUNGI UTENTE</h5>
+                                @Html.ActionLink("Aggiungi utente", "Aggiungiutente", "Admin")
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">MODIFICA NOME PRODOTTO</h5>
+                                @Html.ActionLink("Modifica nome prodotto", "Modificaprodottonome", "Admin")
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>MODIFICA PREZZO PRODOTTO</h5>
+
+                                @Html.ActionLink("Modifica prezzo prodotto", "Modificaprodottoprezzo", "Admin")
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CAMBIA TIPOLOGIA UTENTE</h5>
+
+                                @Html.ActionLink("Cambia tipologia utente", "Modificaisadmin", "Admin")
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+    </main>

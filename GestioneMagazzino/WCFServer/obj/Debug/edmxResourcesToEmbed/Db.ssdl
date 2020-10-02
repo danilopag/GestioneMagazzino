@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MagazzinoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="IDCLIENTE" />
+    </Key>
+    <Property Name="IDCLIENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PARTITAIVA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODICEFISCALE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="INDIRIZZO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FATTURAACQUISTO">
+    <Key>
+      <PropertyRef Name="NFATTURA" />
+    </Key>
+    <Property Name="NFATTURA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DATAACQUISTO" Type="datetime" Nullable="false" />
+    <Property Name="QUANTITA" Type="int" Nullable="false" />
+    <Property Name="PREZZOACQUISTO" Type="float" Nullable="false" />
+    <Property Name="CODFORNITORE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODPRODOTTO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODUTENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FATTURAVENDITA">
+    <Key>
+      <PropertyRef Name="NFATTURA" />
+    </Key>
+    <Property Name="NFATTURA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DATAVENDITA" Type="datetime" Nullable="false" />
+    <Property Name="QUANTITA" Type="int" Nullable="false" />
+    <Property Name="PAGAMENTO" Type="int" Nullable="false" />
+    <Property Name="CODCLIENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODPRODOTTO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CODUTENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FORNITORE">
+    <Key>
+      <PropertyRef Name="IDFORNITORE" />
+    </Key>
+    <Property Name="IDFORNITORE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PARTITAIVA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="INDIRIZZO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODOTTO">
+    <Key>
+      <PropertyRef Name="IDPRODOTTO" />
+    </Key>
+    <Property Name="IDPRODOTTO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DESCRIZIONE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PREZZO" Type="float" Nullable="false" />
+    <Property Name="QUANTITA" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UTENTE">
+    <Key>
+      <PropertyRef Name="IDUTENTE" />
+    </Key>
+    <Property Name="IDUTENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COGNOME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ISADMIN" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_FATTURAACQUISTO_FORNITORE">
+    <End Role="FORNITORE" Type="Self.FORNITORE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FATTURAACQUISTO" Type="Self.FATTURAACQUISTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORNITORE">
+        <PropertyRef Name="IDFORNITORE" />
+      </Principal>
+      <Dependent Role="FATTURAACQUISTO">
+        <PropertyRef Name="CODFORNITORE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FATTURAACQUISTO_PRODOTTO">
+    <End Role="PRODOTTO" Type="Self.PRODOTTO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FATTURAACQUISTO" Type="Self.FATTURAACQUISTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODOTTO">
+        <PropertyRef Name="IDPRODOTTO" />
+      </Principal>
+      <Dependent Role="FATTURAACQUISTO">
+        <PropertyRef Name="CODPRODOTTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FATTURAACQUISTO_UTENTE">
+    <End Role="UTENTE" Type="Self.UTENTE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FATTURAACQUISTO" Type="Self.FATTURAACQUISTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UTENTE">
+        <PropertyRef Name="IDUTENTE" />
+      </Principal>
+      <Dependent Role="FATTURAACQUISTO">
+        <PropertyRef Name="CODUTENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FATTURAVENDITA_CLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FATTURAVENDITA" Type="Self.FATTURAVENDITA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="FATTURAVENDITA">
+        <PropertyRef Name="CODCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FATTURAVENDITA_PRODOTTO">
+    <End Role="PRODOTTO" Type="Self.PRODOTTO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FATTURAVENDITA" Type="Self.FATTURAVENDITA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODOTTO">
+        <PropertyRef Name="IDPRODOTTO" />
+      </Principal>
+      <Dependent Role="FATTURAVENDITA">
+        <PropertyRef Name="CODPRODOTTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FATTURAVENDITA_UTENTE">
+    <End Role="UTENTE" Type="Self.UTENTE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FATTURAVENDITA" Type="Self.FATTURAVENDITA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UTENTE">
+        <PropertyRef Name="IDUTENTE" />
+      </Principal>
+      <Dependent Role="FATTURAVENDITA">
+        <PropertyRef Name="CODUTENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MagazzinoModelStoreContainer">
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FATTURAACQUISTO" EntityType="Self.FATTURAACQUISTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FATTURAVENDITA" EntityType="Self.FATTURAVENDITA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FORNITORE" EntityType="Self.FORNITORE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODOTTO" EntityType="Self.PRODOTTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UTENTE" EntityType="Self.UTENTE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_FATTURAACQUISTO_FORNITORE" Association="Self.FK_FATTURAACQUISTO_FORNITORE">
+      <End Role="FORNITORE" EntitySet="FORNITORE" />
+      <End Role="FATTURAACQUISTO" EntitySet="FATTURAACQUISTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FATTURAACQUISTO_PRODOTTO" Association="Self.FK_FATTURAACQUISTO_PRODOTTO">
+      <End Role="PRODOTTO" EntitySet="PRODOTTO" />
+      <End Role="FATTURAACQUISTO" EntitySet="FATTURAACQUISTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FATTURAACQUISTO_UTENTE" Association="Self.FK_FATTURAACQUISTO_UTENTE">
+      <End Role="UTENTE" EntitySet="UTENTE" />
+      <End Role="FATTURAACQUISTO" EntitySet="FATTURAACQUISTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FATTURAVENDITA_CLIENTE" Association="Self.FK_FATTURAVENDITA_CLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="FATTURAVENDITA" EntitySet="FATTURAVENDITA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FATTURAVENDITA_PRODOTTO" Association="Self.FK_FATTURAVENDITA_PRODOTTO">
+      <End Role="PRODOTTO" EntitySet="PRODOTTO" />
+      <End Role="FATTURAVENDITA" EntitySet="FATTURAVENDITA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FATTURAVENDITA_UTENTE" Association="Self.FK_FATTURAVENDITA_UTENTE">
+      <End Role="UTENTE" EntitySet="UTENTE" />
+      <End Role="FATTURAVENDITA" EntitySet="FATTURAVENDITA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

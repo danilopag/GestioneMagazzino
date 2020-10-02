@@ -1,0 +1,100 @@
+﻿@model IEnumerable<GestioneMagazzino.Models.ModelFattureVendita>
+
+@{
+    ViewBag.Title = "Lista fatture vendita";
+}
+
+
+<h2>Lista Fatture vendita</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nfattura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVendita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pagamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodUtente)
+        </th>
+        <th>
+            @Html.DisplayName("Totale(Euro)")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Quantita != -1)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nfattura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataVendita)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantita)
+                </td>
+                <td>
+                    @if (item.Pagamento == true)
+                    {
+                        @Html.DisplayName("Pagato")
+                    }
+                    else
+                    {
+                        @Html.DisplayName("Da Pagare")
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodUtente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrezzoVendita)
+                </td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td>
+                    @Html.DisplayName("")
+                </td>
+                <td>
+                    @Html.DisplayName("")
+                </td>
+                <td>
+                    @Html.DisplayName("")
+                </td>
+                <td>
+                    @Html.DisplayName("")
+                </td>
+                <td>
+                    @Html.DisplayName("")
+                </td>
+                <td>
+                    @Html.DisplayName("SALDO:")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrezzoVendita)
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+@Html.ActionLink("Torna al menù principale", "IndexAddettoVendite")

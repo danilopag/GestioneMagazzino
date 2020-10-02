@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MagazzinoModelStoreContainer" CdmEntityContainer="MagazzinoConnection">
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="MagazzinoModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="PARTITAIVA" ColumnName="PARTITAIVA" />
+          <ScalarProperty Name="CODICEFISCALE" ColumnName="CODICEFISCALE" />
+          <ScalarProperty Name="INDIRIZZO" ColumnName="INDIRIZZO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATTURAACQUISTO">
+      <EntityTypeMapping TypeName="MagazzinoModel.FATTURAACQUISTO">
+        <MappingFragment StoreEntitySet="FATTURAACQUISTO">
+          <ScalarProperty Name="NFATTURA" ColumnName="NFATTURA" />
+          <ScalarProperty Name="DATAACQUISTO" ColumnName="DATAACQUISTO" />
+          <ScalarProperty Name="QUANTITA" ColumnName="QUANTITA" />
+          <ScalarProperty Name="PREZZOACQUISTO" ColumnName="PREZZOACQUISTO" />
+          <ScalarProperty Name="CODFORNITORE" ColumnName="CODFORNITORE" />
+          <ScalarProperty Name="CODPRODOTTO" ColumnName="CODPRODOTTO" />
+          <ScalarProperty Name="CODUTENTE" ColumnName="CODUTENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATTURAVENDITA">
+      <EntityTypeMapping TypeName="MagazzinoModel.FATTURAVENDITA">
+        <MappingFragment StoreEntitySet="FATTURAVENDITA">
+          <ScalarProperty Name="NFATTURA" ColumnName="NFATTURA" />
+          <ScalarProperty Name="DATAVENDITA" ColumnName="DATAVENDITA" />
+          <ScalarProperty Name="QUANTITA" ColumnName="QUANTITA" />
+          <ScalarProperty Name="PAGAMENTO" ColumnName="PAGAMENTO" />
+          <ScalarProperty Name="CODCLIENTE" ColumnName="CODCLIENTE" />
+          <ScalarProperty Name="CODPRODOTTO" ColumnName="CODPRODOTTO" />
+          <ScalarProperty Name="CODUTENTE" ColumnName="CODUTENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORNITORE">
+      <EntityTypeMapping TypeName="MagazzinoModel.FORNITORE">
+        <MappingFragment StoreEntitySet="FORNITORE">
+          <ScalarProperty Name="IDFORNITORE" ColumnName="IDFORNITORE" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="PARTITAIVA" ColumnName="PARTITAIVA" />
+          <ScalarProperty Name="INDIRIZZO" ColumnName="INDIRIZZO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODOTTO">
+      <EntityTypeMapping TypeName="MagazzinoModel.PRODOTTO">
+        <MappingFragment StoreEntitySet="PRODOTTO">
+          <ScalarProperty Name="IDPRODOTTO" ColumnName="IDPRODOTTO" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="DESCRIZIONE" ColumnName="DESCRIZIONE" />
+          <ScalarProperty Name="PREZZO" ColumnName="PREZZO" />
+          <ScalarProperty Name="QUANTITA" ColumnName="QUANTITA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MagazzinoModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UTENTE">
+      <EntityTypeMapping TypeName="MagazzinoModel.UTENTE">
+        <MappingFragment StoreEntitySet="UTENTE">
+          <ScalarProperty Name="IDUTENTE" ColumnName="IDUTENTE" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="COGNOME" ColumnName="COGNOME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ISADMIN" ColumnName="ISADMIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

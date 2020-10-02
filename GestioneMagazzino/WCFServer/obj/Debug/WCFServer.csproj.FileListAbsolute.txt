@@ -1,0 +1,74 @@
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\WCFServer.exe.config
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\WCFServer.exe
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\WCFServer.pdb
+C:\Users\Locas\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.csprojAssemblyReference.cache
+C:\Users\Locas\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CoreCompileInputs.cache
+C:\Users\Locas\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.exe
+C:\Users\Locas\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.pdb
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\WCFServer.exe.config
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\WCFServer.exe
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CoreCompileInputs.cache
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CopyComplete
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\obj\Debug\WCFServer.exe
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\obj\Debug\WCFServer.pdb
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\WCFServer.pdb
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Locas\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CopyComplete
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\WCFServer.exe.config
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\WCFServer.exe
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\WCFServer.pdb
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mattia\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.csprojAssemblyReference.cache
+C:\Users\Mattia\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CoreCompileInputs.cache
+C:\Users\Mattia\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CopyComplete
+C:\Users\Mattia\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.exe
+C:\Users\Mattia\Desktop\cineteca\WCFServer\obj\Debug\WCFServer.pdb
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\WCFServer.exe.config
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\WCFServer.exe
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\WCFServer.pdb
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\obj\Debug\WCFServer.csprojAssemblyReference.cache
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CoreCompileInputs.cache
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\obj\Debug\WCFServer.csproj.CopyComplete
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\obj\Debug\WCFServer.exe
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\obj\Debug\WCFServer.pdb
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\MySql.Data.dll
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\Google.Protobuf.dll
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Dax\Documents\Uni\Tecnologie Programmazione Industriale\Programmi\cineteca\WCFServer\bin\Debug\MySql.Data.xml
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\MySql.Data.dll
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\Google.Protobuf.dll
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\bin\Debug\MySql.Data.xml
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\MySql.Data.dll
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\Google.Protobuf.dll
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Mattia\Desktop\cineteca\WCFServer\bin\Debug\MySql.Data.xml
+C:\Users\cosmi\Documents\Uni\TecnicheSviluppoAmbienteIndustriale\cineteca\WCFServer\obj\Debug\WCFServer.csprojAssemblyReference.cache
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\MySql.Data.dll
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\Google.Protobuf.dll
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Locas\Desktop\cineteca\WCFServer\bin\Debug\MySql.Data.xml
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\obj\Debug\WCFServer.csprojAssemblyReference.cache
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\obj\Debug\WCFServer.csproj.CoreCompileInputs.cache
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\obj\Debug\WCFServer.exe
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\obj\Debug\WCFServer.pdb
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\WCFServer.exe.config
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\WCFServer.exe
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\WCFServer.pdb
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\EntityFramework.dll
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\Google.Protobuf.dll
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\EntityFramework.xml
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\MySql.Data.xml
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\bin\Debug\it\EntityFramework.resources.dll
+C:\Users\danil\Desktop\GestioneMagazzino\WCFServer\obj\Debug\WCFServer.csproj.CopyComplete
